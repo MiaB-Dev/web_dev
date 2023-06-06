@@ -6,20 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viagem dos sonhos</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
         <nav>
             <ul>
-                <li>Pacotes</li>
-                <li>Taxa</li>
-                <li>Contato</li>
+                <li><a href="#">Pacotes</a></li>
+                <li><a href="#">Taxa</a></li>
+                <li><a href="#">Contato</a></li>
             </ul>
         </nav>
-        <h1>Venha realizar a viagem dos seus sonhos</h1>
+        <h1>Venha realizar a viagem dos seus sonhos!</h1>
     </header>
-    <section>
+    <section id="pacotes">
         <h2>Conheça nossos pacotes</h2>
         <p>
             aaaaaaa
@@ -27,29 +28,37 @@
             <a href="www.gooogle.com">AAA</a>
             <hr>
         </p>
-        <figure>
-            <img src="img/nossos-pacotes/gramado.jpeg" alt="Imagem de chalé em Gramado">
-            <figcaption>Gramado</figcaption>
-        </figure>
-        <figure>
-            <img src="img/nossos-pacotes/porto-seguro.jpeg" alt="Praia em Porto Seguro">
-            <figcaption>Porto Seguro</figcaption>
-        </figure>
-        <figure>
-            <img src="img/nossos-pacotes/rio-de-janeiro.jpeg" alt="Rio de Janeiro visto de cima">
-            <figcaption>Rio de Janeiro</figcaption>
-        </figure>
+        <div class="figuras">
+            <figure>
+                <img src="img/nossos-pacotes/gramado.jpeg" alt="Imagem de chalé em Gramado">
+                <figcaption>Gramado</figcaption>
+            </figure>
+            <figure>
+                <img src="img/nossos-pacotes/porto-seguro.jpeg" alt="Praia em Porto Seguro">
+                <figcaption>Porto Seguro</figcaption>
+            </figure>
+            <figure>
+                <img src="img/nossos-pacotes/rio-de-janeiro.jpeg" alt="Rio de Janeiro visto de cima">
+                <figcaption>Rio de Janeiro</figcaption>
+            </figure>
+        </div>
+
+        <div class="videos">
+            <video controls width="500px">
+                <source src="video/rabbit320.mp4" type="video/mp4">
+                <source src="video/rabbit320.webm" type="video/webm">
+                Seu navegador não suporta o formato do vídeo <a href="video/rabbit320.mp4"> Clique aqui para baixar</a>
+            </video>
+        </div>
+
+
     </section>
-    <video controls width="500px">
-        <source src="video/rabbit320.mp4" type="video/mp4">
-        <source src="video/rabbit320.webm" type="video/webm">
-        Seu navegador não suporta o formato do vídeo <a href="video/rabbit320.mp4"> Clique aqui para baixar</a>
-    </video>
+
     <br><br>
     <section>
         <h2>Taxas e serviços</h2>
         <p>Veja nossas taxas para serviços</p>
-        <table border>
+        <table>
             <caption>Descrição dos serviços e respectivos valores</caption>
             <thead>
                 <tr>
@@ -63,31 +72,82 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>
-                        Reserva de hotel
-                    </td>
-                    <td>
-                        R$ 150,00
-                    </td>
+                    <td>Reserva de hotel</td>
+                    <td>R$ 150,00</td>
                 </tr>
                 <tr>
-                    <td>
-                        Compra de passagens
-                    </td>
-                    <td>
-                        R$ 100,00
-                    </td>
+                    <td>Compra de passagens</td>
+                    <td>R$ 100,00</td>
                 </tr>
                 <tr>
-                    <td>
-                        Aluguel de carros
-                    </td>
-                    <td>
-                        R$ 50,00
-                    </td>
+                    <td>Aluguel de carros</td>
+                    <td>R$ 50,00</td>
                 </tr>
             </tbody>
         </table>
+    </section>
+    <section>
+        <h2>Orçamento</h2>
+        <form action="" method="get">
+            <fieldset>
+                <legend>Dados da viagem</legend>
+                <label>Nome</label><br>
+                <input type="text" name="nome"><br><br>
+                <label>Email</label><br>
+                <input type="email" name="email"><br><br>
+
+                <label>Data de ida</label><br>
+                <input type="date" name="dataIda"><br><br>
+
+                <label>Data de volta</label><br>
+                <input type="date" name="dataVolta"><br><br>
+
+                <label>Quantidade de pessoas</label><br>
+                <input type="number" name="qtdPessoas"><br><br>
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Quais serviços deseja contratar?</legend>
+                <label for="">
+                    <br><input type="checkbox" name="passagens" value="Passagens">Compra de passagens
+                </label>
+                <label for="">
+                    <br><input type="checkbox" name="hospedagem" value="Hospedagem">Reserva de hospedagem
+                </label>
+                <label for="">
+                    <br><input type="checkbox" name="veiculos" value="Veiculo">Reserva de veículos
+                </label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Escolha a forma de pagamento</legend>
+                <label for="">
+                    <br><input type="radio" name="formaPagamento" value="Cartão de crédito">Cartão de crédito
+                </label>
+                <label for="">
+                    <br><input type="radio" name="formaPagamento" value="Boleto">Boleto
+                </label>
+                <label for="">
+                    <br><input type="radio" name="formaPagamento" value="Pix">Pix
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Escolha o prazo para pagamento</legend>
+                <select name="prazoPagamento">
+                    <option value="aVista">Á vista</option>
+                    <option value="5x">5x sem juros</option>
+                    <option value="10x" selected>10x com juros</option>
+                </select>
+            </fieldset>
+
+            <label>Comentário</label><br>
+            <textarea name="comentario" rows="5"></textarea><br><br>
+
+            <button>Salvar</button>
+        </form>
     </section>
 
     <footer>
