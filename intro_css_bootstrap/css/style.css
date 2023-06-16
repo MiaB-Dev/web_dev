@@ -21,7 +21,7 @@ h1 {
     font-size: 60px;
     color: #303030;
     padding: 20px;
-    color: #FFFFFF;
+    //color: #FFFFFF;
     text-align: center;
 
 }
@@ -33,6 +33,16 @@ h2 {
     font-weight: 600; /* Vai de 100 a 900, onde 400 é igual a normal e 700 é negrito */
 }
 
+.modal-header {
+    //background-color: #001133;
+    color: #001133;
+  }
+
+  .model-header h1{
+    
+    color: #ffc107;
+    
+}
 
 nav li a{
     padding: 10px;
@@ -57,26 +67,8 @@ nav {
     padding-right: 40px;
 }
 
-table{
-    width: 100%;
+.carousel-caption h5{
+    font-size: 80px;
+    color: #ffc107;
+    text-shadow: 2px 2px 2px black;
 }
-
-table td{
-    color: #303030;
-    padding: 5px;
-}
-
-table tr:nth-child(even){
-    background-color: #e9e9e9;
-}
-
-table tr:nth-child(odd){
-    background-color: #bdbdbdbd;
-}
-
-
-table thead th{
-    background-color: #f4511e;
-    color: white;
-}
-
